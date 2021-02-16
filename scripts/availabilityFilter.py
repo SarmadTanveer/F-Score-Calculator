@@ -38,7 +38,7 @@ tickersForAnalysis2 = []
 for j in range (len(tickersForAnalysis1)): #total357
     print(tickersForAnalysis1[j])
     try:
-        BS = requests.get(f"https://financialmodelingprep.com/api/v3/financials/balance-sheet-statement/{tickersForAnalysis1[j]}?period=quarter&apikey=d684d9ac76fc9902f5608b588fff159b")
+        BS = requests.get(f"https://financialmodelingprep.com/api/v3/financials/balance-sheet-statement/{tickersForAnalysis1[j]}?period=quarter&apikey=yourapikey")
         BS = BS.json()
         print(len(BS['financials']))
     except KeyError:
