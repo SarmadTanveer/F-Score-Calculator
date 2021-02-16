@@ -9,17 +9,17 @@ def getData(ticker, year):
     i, j, k = 0, 0, 0
     # BalanceSheet
     BS = requests.get(
-        f"https://financialmodelingprep.com/api/v3/financials/balance-sheet-statement/{ticker}?period=quarter&apikey=d684d9ac76fc9902f5608b588fff159b")
+        f"https://financialmodelingprep.com/api/v3/financials/balance-sheet-statement/{ticker}?period=quarter&apikey=yourapikey")
     BS = BS.json()
 
     # Income statement
     IS = requests.get(
-        f"https://financialmodelingprep.com/api/v3/financials/income-statement/{ticker}?period=quarter&apikey=d684d9ac76fc9902f5608b588fff159b")
+        f"https://financialmodelingprep.com/api/v3/financials/income-statement/{ticker}?period=quarter&apikey=yourapikey")
     IS = IS.json()
 
     # Cashflow statement
     CF = requests.get(
-        f'https://financialmodelingprep.com/api/v3/financials/cash-flow-statement/{ticker}?period=quarter&apikey=d684d9ac76fc9902f5608b588fff159b')
+        f'https://financialmodelingprep.com/api/v3/financials/cash-flow-statement/{ticker}?period=quarter&apikey=yourapikey')
     CF = CF.json()
 
     for a in range(len(BS['financials'])):
